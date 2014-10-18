@@ -1,0 +1,21 @@
+<%= hidden_field_tag 'search_type', 'standard' %>
+
+<span class="slider_value_label">Tire Width</span> <span id="tire_width_display"><%= "#{default_min_tire_width} - #{default_max_tire_width}" %></span>
+<%= hidden_field_tag 'min_tire_width', default_min_tire_width, :id => 'min_tire_width' %>
+<%= hidden_field_tag 'max_tire_width', default_max_tire_width, :id => 'max_tire_width' %>
+<div id="tire_width_range" class="slider"></div>
+
+<br/>
+
+<span class="slider_value_label">Wheel Diameter</span> <span id="wheel_diameter_display"><%= "#{default_wheel_diameter} inches" %></span>
+<%= hidden_field_tag 'wheel_diameter', default_wheel_diameter, :id => 'wheel_diameter' %>
+<div id="wheel_diameter_range" class="slider"></div>
+
+<br/>
+
+<span class="slider_value_label">Tire Diameter</span> <span id="tire_diameter_display"><%= "#{default_min_tire_diameter} - #{default_max_tire_diameter} inches" %></span>
+<%= hidden_field_tag 'min_tire_diameter', default_min_tire_diameter, :id => 'min_tire_diameter' %>
+<%= hidden_field_tag 'max_tire_diameter', default_max_tire_diameter, :id => 'max_tire_diameter' %>
+<div id="tire_diameter_range" class="slider"></div>
+
+<%= render :partial => '/partials/tire_search_form_standard.js.erb' %>

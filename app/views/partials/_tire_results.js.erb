@@ -1,0 +1,56 @@
+<script type="text/javascript">
+  $("div#tires th[title]").tooltip({ position: "top center", offset: [24, -10]});
+  
+  function header_sort(value) {
+    if($('select#sorts_1').val() == value) {
+        if($('select#orders_1').val() == 'asc')
+            $('select#orders_1').val('desc')
+        else
+          $('select#orders_1').val('asc')
+      }
+      else {
+          $('select#sorts_5').val($('select#sorts_4').val());
+          $('select#orders_5').val($('select#orders_4').val());
+          
+          $('select#sorts_4').val($('select#sorts_3').val());
+          $('select#orders_4').val($('select#orders_3').val());
+          
+          $('select#sorts_3').val($('select#sorts_2').val());
+          $('select#orders_3').val($('select#orders_2').val());
+          
+          $('select#sorts_2').val($('select#sorts_1').val());
+          $('select#orders_2').val($('select#orders_1').val());
+          
+          $('select#sorts_1').val(value);
+          $('select#orders_1').val('asc');
+      }
+      
+      $('#search_form').submit();
+  }
+  
+  $('th#brand_heading').click(function() {
+      header_sort('manufacturer');
+  });
+  
+  $('th#model_heading').click(function() {
+      header_sort('model');
+  });
+  
+  $('th#size_heading').click(function() {
+      header_sort('width');
+  });
+  
+  $('th#type_heading').click(function() {
+      header_sort('tire_type');
+  });
+  
+  $('th#diameter_heading').click(function() {
+      header_sort('tire_diameter');
+  });
+  
+  $('th#weight_heading').click(function() {
+      header_sort('weight');
+  });
+
+  $("table#tire_results").floatHeader();
+</script>

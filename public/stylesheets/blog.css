@@ -1,0 +1,26 @@
+div.blog_body {
+    display: block;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 14px;
+}
+
+div.blog_post {
+    margin-top: 20px;
+    
+}
+
+div.blog_post_title span.blog_post_date {
+    font-size: .7em;
+    color: gray;
+    clear: both;
+}
+
+div.blog_post_title {
+    font-size: 2.0em;
+}
+
+div.blog_post_body {
+    
+}

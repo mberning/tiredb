@@ -1,0 +1,77 @@
+<%
+  page = params[:page].to_i || 0
+  pages = Range.new(0, (@tires.size / 20 ).ceil )
+  results_start = page * 20
+  results_end = [results_start + 19, @tires.size - 1].min
+  results_range = Range.new(results_start, results_end)
+%>
+
+<% pages.each do |p| %>
+  <% if p == page %>
+    <ins class="current_page"><%= p + 1 %></ins>
+  <% else %>
+    <ins onclick="$('form#search_form input#page').attr('value', <%= p %>);$('form#search_form').submit();"><%= p + 1 %></ins>
+  <% end %>
+<% end %>
+
+<%= "Showing #{results_start+1} to #{results_end+1} of #{@tires.size} rear tires matched" %><span id="throbber">&nbsp;</span>
+
+<table id="tire_results">
+  <thead>
+    <tr class="header">
+      <th id="brand_heading">Brand <%= sort_icon('manufacturer').html_safe %></th>
+      <th id="model_heading">Model <%= sort_icon('model').html_safe %></th>
+      <th id="size_heading">Size <%= sort_icon('width').html_safe %></th>
+      <th id="diff_heading" title="Speedometer vs stock">Difference</th>
+      <th id="view_heading">View</th>
+      <th id="type_heading">Type <%= sort_icon('tire_type').html_safe %></th>
+      <th id="diameter_heading">Diameter <%= sort_icon('tire_diameter').html_safe %><br/>(in)</th>
+      <th id="weight_heading">Weight <%= sort_icon('weight').html_safe %><br/>(lb)</th>
+      <th id="wheel_widths_heading">Wheel<br/>Widths</th>
+      <th id="treadwear_heading" title="Treadwear">TW</th>
+      <th id="directional_heading" title="Directional">D</th>
+      <th id="asymmetrical_heading" title="Asymmetrical">A</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% 
+      @tires[results_range].each do |set|
+        rear_tire = set[0]
+        front_tires = set[1]
+      
+    %>
+      <tr class="even">
+        <td><%= rear_tire.manufacturer %></td>
+        <td><%= rear_tire.model %></td>
+        <td><%= rear_tire.tire_code %></td>
+        <td class="diff"></td>
+        <td><%= rear_tire.tire_rack_link.html_safe %></td>
+        <td><%= translate_tire_type(rear_tire.tire_type) %></td>
+        <td class="diam"><%= "%3.1f" % rear_tire.tire_diameter %></td>
+        <td><%= "%3.1f" % rear_tire.weight %></td>
+        <td><%= rear_tire.wheel_width_range %></td>
+        <td><%= rear_tire.treadwear.blank? ? 'N/A' : rear_tire.treadwear %></td>
+        <td><%= rear_tire.directional ? 'Y' : 'N' %></td>
+        <td><%= rear_tire.asymmetrical ? 'Y' : 'N' %></td>
+      </tr>
+      <% front_tires.each do |front_tire| %>
+        <tr>
+          <td><%= front_tire.manufacturer %></td>
+          <td><%= front_tire.model %></td>
+          <td><%= front_tire.tire_code %></td>
+          <td class="diff"></td>
+          <td><%= front_tire.tire_rack_link.html_safe %></td>
+          <td><%= translate_tire_type(front_tire.tire_type) %></td>
+          <td class="diam"><%= "%3.1f" % front_tire.tire_diameter %></td>
+          <td><%= "%3.1f" % front_tire.weight %></td>
+          <td><%= front_tire.wheel_width_range %></td>
+          <td><%= front_tire.treadwear.blank? ? 'N/A' : front_tire.treadwear %></td>
+          <td><%= front_tire.directional ? 'Y' : 'N' %></td>
+          <td><%= front_tire.asymmetrical ? 'Y' : 'N' %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<%= render :partial => '/partials/tire_results.js.erb' %>

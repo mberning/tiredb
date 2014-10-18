@@ -1,0 +1,22 @@
+Massive Changes
+2011-07-22 00:00:43
+
+~
+
+[TireDB](http://www.tiredb.com) has undergone some significant changes.
+
+
+* Speed enhancements
+    * Site resources have been compressed and combined (CSS and JS)
+    * CSS Sprites have replaced static images
+    * Database indexs added
+    * Results pagination
+    
+* New Tires
+    * Dunlop
+        * SP Sport Maxx
+        * Direzza DZ101
+        * SP Sport 01
+        * SP Sport 01 DSST
+        * SP Sport 01 DSST RunOnFlat
+        * SP Sport 2050

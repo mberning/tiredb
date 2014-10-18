@@ -1,0 +1,11 @@
+Continued Development
+2011-07-14 20:13:00
+
+~
+
+[TireDB](http://www.tiredb.com) continues to improve!
+
+* Updated the tire search results to have a floating header.
+* Cleaned up some duplicate tire entries.
+* Speed improvements.
+* Added Hankook Ventus V12 Evo, Sumitomo HTR ZIII

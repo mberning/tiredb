@@ -1,0 +1,151 @@
+<table id="body">
+  <tr class="header_row">
+    <td class="left_column logo"><span class="sprite sprite-tire_db_logo">&nbsp;</span></td>
+    <td class="right_column">
+      <table id="inputs_and_links">
+        <tr>
+          <td class="inputs">
+            <%= text_field_tag 'stock_diameter' %>
+          </td>
+          <td class="links">
+            <a href="<%= blog_path %>">blog</a> 
+            <span>&nbsp;|&nbsp;</span>
+            <a href="mailto:mike@tiredb.com">contact</a>
+          </td>
+          <td class="facebook">
+            <iframe src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FTireDB%2F240389939328018&amp;width=292&amp;colorscheme=light&amp;show_faces=false&amp;border_color&amp;stream=false&amp;header=true&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:62px;" allowTransparency="true"></iframe>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr class="main_row">
+    <td class="left_column">
+      <%= form_tag standard_search_path, :remote => true, 'data-type' => :html, :id => 'search_form' do %>
+      <%= hidden_field_tag 'page', '0'  %>
+        <table id="search_form">
+          <tr>
+            <td class="form_section_header brands">
+              Brands 
+              <span id="select_all_brands" class="pointer">all</span> 
+              <span id="space"> | </span> 
+              <span id="select_no_brands" class="pointer">none</span> 
+              <span id="reset_button" class="search_button button">Reset</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="manufacturer_selection" class="form_section">
+              <table>
+                <tr>
+                  <td>
+                    <%= check_box_tag 'brands[]', 'Bridgestone', true %> Bridgestone <br/>
+                    <%= check_box_tag 'brands[]', 'BF Goodrich', true %> BF Goodrich <br/>
+                    <%= check_box_tag 'brands[]', 'Continental', true %> Continental <br/>
+                    <%= check_box_tag 'brands[]', 'Cooper', true %> Cooper <br/>
+                    <%= check_box_tag 'brands[]', 'Dunlop', true %> Dunlop <br/>
+                    <%= check_box_tag 'brands[]', 'Falken', true %> Falken <br/>
+                    <%= check_box_tag 'brands[]', 'Federal', true %> Federal <br/>
+                    <%= check_box_tag 'brands[]', 'Goodyear', true %> Goodyear <br/>
+                    <%= check_box_tag 'brands[]', 'Hankook', true %> Hankook <br/>
+                  </td>
+                  <td class="brands_right">
+                    <%= check_box_tag 'brands[]', 'Hoosier', true %> Hoosier <br/>
+                    <%= check_box_tag 'brands[]', 'Kumho', true %> Kumho <br/>
+                    <%= check_box_tag 'brands[]', 'Michelin', true %> Michelin <br/>
+                    <%= check_box_tag 'brands[]', 'Nitto', true %> Nitto <br/>
+                    <%= check_box_tag 'brands[]', 'Pirelli', true %> Pirelli <br/>
+                    <%= check_box_tag 'brands[]', 'Sumitomo', true %> Sumitomo <br/>
+                    <%= check_box_tag 'brands[]', 'Toyo', true %> Toyo <br/>
+                    <%= check_box_tag 'brands[]', 'Yokohama', true %> Yokohama
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="form_section_header sizes">
+              Tire Size
+              <span id="standard_search" class="pointer"><%= link_to 'tire', standard_search_form_path, 'data-type' => :html, :remote => true%></span>
+              <span id="space"> | </span>
+              <span id="wheel_search" class="pointer"><%= link_to 'wheel', wheel_search_form_path, 'data-type' => :html, :remote => true%></span>
+              <span id="space"> | </span>
+              <span id="staggered_search" class="pointer"><%= link_to 'staggered', staggered_search_form_path, 'data-type' => :html, :remote => true%></span>
+              <span id="space"> | </span> 
+              <span id="hardcore_search" class="pointer"><%= link_to 'uber', hardcore_search_form_path, 'data-type' => :html, :remote => true%></span>
+            </td>
+          </tr>
+          <tr>
+            <td id="size_selection" class="form_section">
+              <%= render :partial => '/partials/tire_search_form_standard' %>
+            </td>
+          </tr>
+          <tr>
+            <td class="form_section_header types">
+              Tire Attributes
+              <span id="select_all_types" class="pointer">all</span> 
+              <span id="space"> | </span> 
+              <span id="select_no_types" class="pointer">none</span>
+              <span id="space"> | </span> 
+              <span id="select_summer_types" class="pointer">summer</span>
+              <span id="space"> | </span> 
+              <span id="select_winter_types" class="pointer">winter</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="form_section tire_attributes">
+              <div class="types">
+                <%= check_box_tag 'tire_types[]', '0dotr', true %>DOT R Comp<span class="sprite sprite-question" title="DOT R Comps provide extreme levels of warm weather grip, at the expense of tread wear and wet performance. Intended for track and competition use."></span><br/>
+                <%= check_box_tag 'tire_types[]', '1hps', true, :class => 'summer' %>Extreme Performance Summer<span class="sprite sprite-question" title="Extreme Performance Summer tires provide very high levels of warm weather grip and passable wet performance. Not intended for cold weather use."></span><br/>
+                <%= check_box_tag 'tire_types[]', '2s', true, :class => 'summer' %>High Performance Summer<span class="sprite sprite-question" title="High Performance Summer tires provide a balanced amount of warm weather grip and wet performance. Not intended for cold weather use."></span><br/>
+                <%= check_box_tag 'tire_types[]', '3hpa', true, :class => 'as' %>High Performance All Season<span class="sprite sprite-question" title="High Performance All Season tires provide the best performance across all weather conditions, but do not excel in any one category."></span><br/>
+                <%= check_box_tag 'tire_types[]', '4a', true, :class => 'as' %>All Season<span class="sprite sprite-question" title="All Season tires provide good performance in all weather conditions and offer a good value for the money, but do not excel in any one category."></span><br/>
+                <%= check_box_tag 'tire_types[]', '5hpw', true, :class => 'winter' %>High Performance Winter<span class="sprite sprite-question" title="High Performance Winter tires provide high levels of cold weather grip in dry conditions while still ensuring high performance on ice and snow."></span><br/>
+                <%= check_box_tag 'tire_types[]', '6w', true, :class => 'winter' %>Winter Ice/Snow<span class="sprite sprite-question" title="Winter Ice and Snow tires provide uncompromising amounts of grip on ice, snow, and slush at the expense of dry performance."></span><br/>
+              </div>
+              
+              <br/>
+
+              Tire Weight <span id="tire_weight_display"><%= "#{default_min_tire_weight} - #{default_max_tire_weight}" %></span> lbs
+              <%= hidden_field_tag 'min_tire_weight', default_min_tire_weight, :id => 'min_tire_weight' %>
+              <%= hidden_field_tag 'max_tire_weight', default_max_tire_weight, :id => 'max_tire_weight' %>
+              <div id="tire_weight_range" class="slider"></div>
+
+              <br/>
+              <%= select_tag 'directional', options_for_select(directional, default_directional) %> Directional<br/>
+              <%= select_tag 'asymmetrical', options_for_select(asymmetrical, default_asymmetrical) %> Asymmetrical
+            </td>
+          </tr>
+          <tr>
+            <td class="form_section_header">
+              Sort By
+            </td>
+          </tr>
+          <tr>
+            <td class="form_section">
+              <%= select_tag 'sorts[]', options_for_select(available_sorts, 'tire_type'), :id => 'sorts_1' %>
+              <%= select_tag 'orders[]', options_for_select(available_orders, 'asc'), :id => 'orders_1' %><br/>
+
+              <%= select_tag 'sorts[]', options_for_select(available_sorts, 'brand'), :id => 'sorts_2' %>
+              <%= select_tag 'orders[]', options_for_select(available_orders, 'asc'), :id => 'orders_2' %><br/>
+
+              <%= select_tag 'sorts[]', options_for_select(available_sorts, 'model'), :id => 'sorts_3' %>
+              <%= select_tag 'orders[]', options_for_select(available_orders, 'asc'), :id => 'orders_3' %><br/>
+
+              <%= select_tag 'sorts[]', options_for_select(available_sorts, 'wheel_diameter'), :id => 'sorts_4'%>
+              <%= select_tag 'orders[]', options_for_select(available_orders, 'asc'), :id => 'orders_4' %><br/>
+
+              <%= select_tag 'sorts[]', options_for_select(available_sorts, 'width'), :id => 'sorts_5' %>
+              <%= select_tag 'orders[]', options_for_select(available_orders, 'asc'), :id => 'orders_5' %>
+            </td>
+          </tr>
+        </table>
+      <% end %>
+    </td>
+    
+    <td class="right_column">
+      <div id="tires">
+        <%= render :partial => 'partials/tire_results_standard' %>
+      </div>
+    </td>
+  </tr>
+</table>

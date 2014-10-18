@@ -1,0 +1,67 @@
+<script type="text/javascript">
+  $(function() {
+    $( "#wheel_width_range" ).slider({
+      range: false,
+      min: <%= min_wheel_width %>,
+      max: <%= max_wheel_width %>,
+      step: 0.5,
+      value: <%= default_wheel_width %>,
+      slide: function( event, ui ) {
+                $("#wheel_width_display").text(ui.value + " inches");
+                $("#wheel_width").val(ui.value);
+                $('form#search_form input#page').attr('value', 0);
+              },
+      stop: function( event, ui) {
+              $('#search_form').submit();
+            }
+    });
+    
+    $( "#wheel_diameter_range" ).slider({
+      min: <%= min_wheel_diameter %>,
+      max: <%= max_wheel_diameter %>,
+      value: <%= default_wheel_diameter %>,
+      slide: function( event, ui ) {
+                $("#wheel_diameter_display").text(ui.value + " inches");
+                $("#wheel_diameter").val(ui.value);
+                $('form#search_form input#page').attr('value', 0);
+              },
+      stop: function( event, ui) {
+              $('#search_form').submit();
+            }
+    });
+    
+    $( "#tire_diameter_range" ).slider({
+      range: true,
+      min: <%= min_tire_diameter %>,
+      max: <%= max_tire_diameter %>,
+      values: [ <%= default_min_tire_diameter %>, <%= default_max_tire_diameter %> ],
+      slide: function( event, ui ) {
+                $("#tire_diameter_display").text(ui.values[0] + " - " + ui.values[1] + " inches");
+                $("#min_tire_diameter").val(ui.values[0]);
+                $("#max_tire_diameter").val(ui.values[1]);
+                $('form#search_form input#page').attr('value', 0);
+              },
+      stop: function( event, ui) {
+              $('#search_form').submit();
+            }
+    });
+    
+    $( "#tire_weight_range" ).slider({
+      range: true,
+      min: <%= min_tire_weight %>,
+      max: <%= max_tire_weight %>,
+      values: [ <%= default_min_tire_weight %>, <%= default_max_tire_weight %> ],
+      slide: function( event, ui ) {
+                $("#tire_weight_display").text(ui.values[0] + " - " + ui.values[1]);
+                $("#min_tire_weight").val(ui.values[0]);
+                $("#max_tire_weight").val(ui.values[1]);
+                $('form#search_form input#page').attr('value', 0);
+              },
+      stop: function( event, ui) {
+              $('#search_form').submit();
+            }
+    });
+  });
+  
+  _gaq.push(['_trackPageview', '/search/wheel']);
+</script>

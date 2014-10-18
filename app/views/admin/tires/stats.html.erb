@@ -1,0 +1,45 @@
+<style>
+table, tr, td {
+  vertical-align: top;
+  text-align: left;
+}
+
+td {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+td.type {
+  text-align: center;
+  font-weight: bolder;
+  padding-top: 20px;
+}
+
+td.brand {
+  font-weight: bold;
+}
+</style>
+
+<table style="width: 150%">
+  <% @tires.keys.sort.each do |type| %>
+    <tr>
+      <td class="type" colspan="<%= @tires[type].keys.count %>">
+        <%= type %>
+      </td>
+    </tr>
+    <tr>
+      <% @tires[type].keys.sort.each do |brand| %>
+      <td class="brand"><%= brand %></td>
+      <% end %>
+    </tr>
+    <tr>
+      <% @tires[type].keys.sort.each do |brand| %>
+        <td>
+        <% @tires[type][brand].sort.each do |model| %>
+          <%= model %> <br/>
+        <% end %>
+        </td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>

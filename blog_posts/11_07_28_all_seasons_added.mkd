@@ -1,0 +1,46 @@
+All season tires added, more winter tires added
+2011-07-28 22:58:00
+
+~
+
+I'm pleased to announce that [TireDB](http://www.tiredb.com) is now tracking high performance all season tires. 
+We've also added more winter tires as well. You can see a list of additions below. 
+
+* High Performance All Season
+    * BF Goodrich    
+        * g-Force Super Sport A/S
+        * g-Force T/A KDWS
+    * Bridgestone    
+        * Potenza RE960AS Pole Position
+        * Potenza RE970AS Pole Position
+    * Dunlop    
+        * SP Sport 5000 M
+        * SP Sport 5000 Symmetrical
+        * SP Sport 7010 A/S DSST
+        * SP Sport Signature
+    * Goodyear    
+        * Eagle F1 All Season
+        * Eagle GT
+    * Hankook    
+        * Ventus V4 ES H105
+    * Kumho
+        * Ecsta ASX
+    * Michelin    
+        * Pilot Sport A/S Plus
+        * Pilot Sport A/S Plus ZP
+    * Pirelli    
+        * PZero Nero All Season
+        * PZero Nero All Season RFT
+        * PZero Nero M&S
+    * Sumitomo    
+        * HTR A/S P01
+    * Yokohama    
+        * ADVAN S.4.
+        * AVID ENVigor
+* Winter
+    * Cooper
+        * Weather-Master S/T 2
+        * Weather-Master WSC
+    * Falken
+        * Espia EPZ
+        * Eurowinter HS439

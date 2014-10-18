@@ -1,0 +1,68 @@
+<script type="text/javascript">
+  $(function() {
+    $( "#tire_width_range" ).slider({
+      range: true,
+      min: <%= min_tire_width %>,
+      max: <%= max_tire_width %>,
+      step: 10,
+      values: [ <%= default_min_tire_width %>, <%= default_max_tire_width %> ],
+      slide: function( event, ui ) {
+                $("#tire_width_display").text(ui.values[0] + " - " + ui.values[1]);
+                $("#min_tire_width").val(ui.values[0]);
+                $("#max_tire_width").val(ui.values[1]);
+                $('form#search_form input#page').attr('value', 0);
+              },
+      stop: function( event, ui) {
+              $('#search_form').submit();
+            }
+    });
+    
+    $( "#wheel_diameter_range" ).slider({
+      min: <%= min_wheel_diameter %>,
+      max: <%= max_wheel_diameter %>,
+      value: <%= default_wheel_diameter %>,
+      slide: function( event, ui ) {
+                $("#wheel_diameter_display").text(ui.value + " inches");
+                $("#wheel_diameter").val(ui.value);
+                $('form#search_form input#page').attr('value', 0);
+              },
+      stop: function( event, ui) {
+              $('#search_form').submit();
+            }
+    });
+    
+    $( "#tire_diameter_range" ).slider({
+      range: true,
+      min: <%= min_tire_diameter %>,
+      max: <%= max_tire_diameter %>,
+      values: [ <%= default_min_tire_diameter %>, <%= default_max_tire_diameter %> ],
+      slide: function( event, ui ) {
+                $("#tire_diameter_display").text(ui.values[0] + " - " + ui.values[1] + " inches");
+                $("#min_tire_diameter").val(ui.values[0]);
+                $("#max_tire_diameter").val(ui.values[1]);
+                $('form#search_form input#page').attr('value', 0);
+              },
+      stop: function( event, ui) {
+              $('#search_form').submit();
+            }
+    });
+    
+    $( "#tire_weight_range" ).slider({
+      range: true,
+      min: <%= min_tire_weight %>,
+      max: <%= max_tire_weight %>,
+      values: [ <%= default_min_tire_weight %>, <%= default_max_tire_weight %> ],
+      slide: function( event, ui ) {
+                $("#tire_weight_display").text(ui.values[0] + " - " + ui.values[1]);
+                $("#min_tire_weight").val(ui.values[0]);
+                $("#max_tire_weight").val(ui.values[1]);
+                $('form#search_form input#page').attr('value', 0);
+              },
+      stop: function( event, ui) {
+              $('#search_form').submit();
+            }
+    });
+  });
+  
+  _gaq.push(['_trackPageview', '/search/standard']);
+</script>

@@ -1,0 +1,17 @@
+Size Comparison, More DOT R Comps added
+2011-08-01 22:19:00
+
+~
+
+[TireDB](http://www.tiredb.com) now has the ability to take your stock tire diameter 
+and calculate how much each tire in the search results will affect your speedometer.
+
+We have also added some more tires to the search:
+
+* Kumho
+    * Ecsta V700
+    * Ecsta V710
+    * Ecsta W710
+    * VictoRacer V700
+* Michelin
+    * Pilot Sport Cup+ / N-Spec

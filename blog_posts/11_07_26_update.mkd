@@ -1,0 +1,32 @@
+'Uber' Search Option, Winter Tires
+2011-07-26 22:01:00
+
+~
+
+[TireDB](http://www.tiredb.com) now has an 'Uber' search option. This option allows
+you to search for tires by brand, type, width, sidewall height, wheel diameter, tire diameter, and weight.
+
+We've also added winter tires to our database. We currently index the following winter tires
+
+* Bridgestone
+    * Blizzak LM-60
+    * Blizzak WS-60
+    * Blizzak WS-70
+* Continental
+    * ExtremeWinterContact
+* Dunlop
+    * SP Winter Sport 3D
+    * SP Winter Sport M3
+    * Graspic DS-3
+* Michelin
+    * Pilot Alpin PA2
+    * Pilot Alpin PA3
+    * Primacy Alpin PA3
+    * X-Ice Xi2
+* Toyo
+    * Observe Garit KX
+    * Snowprox S952
+    * Observe G-02 Plus
+    * Observe G2S
+
+More winter tires to come!

@@ -1,0 +1,26 @@
+iOS Support, More Tires Added
+2011-08-11 00:08:00
+
+~
+
+[TireDB](http://www.tiredb.com) now supports iPad and iPhone. Previously there were issues with the size sliders that have now been resolved.
+We have also reworked the classification on some tires to better match their intended use.
+
+A number of new tires have been added as well.
+
+* Cooper
+    * Zeon RS3-A
+* Falken
+    * FK452
+    * Azenis PT722 A/S
+    * ZIEX ZE-912
+* Michelin
+    * Pilot Sport Cup ZP
+* Pirelli
+    * PZero Corsa
+    * PZero Corsa System
+* Toyo
+    * Proxes 1
+    * Proxes 4
+    * Proxes T1 Sport
+    * Proxes RA1

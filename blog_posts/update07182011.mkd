@@ -1,0 +1,9 @@
+Staggered Tire Search
+2011-07-18 23:45:00
+
+~
+
+I'm very happy to announce the availability of an advanced staggered tire search on [TireDB](www.tiredb.com). For each rear tire matching your
+search criteria TireDB will find matching front tires that are within +/- .1" in overall diameter.
+
+I have also added Toyo Proxes T1R tires to the tire search.

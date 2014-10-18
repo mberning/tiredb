@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  manufacturer: MyString
+  model: MyString
+  sku: MyString
+  width: 1
+  aspect_ratio: 1
+  wheel_diameter: 9.99
+  asymmetrical: false
+  directional: false
+  treadwear: 1
+  min_wheel_width: 9.99
+  max_wheel_width: 9.99
+
+two:
+  manufacturer: MyString
+  model: MyString
+  sku: MyString
+  width: 1
+  aspect_ratio: 1
+  wheel_diameter: 9.99
+  asymmetrical: false
+  directional: false
+  treadwear: 1
+  min_wheel_width: 9.99
+  max_wheel_width: 9.99

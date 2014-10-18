@@ -1,0 +1,54 @@
+More Tires Added
+2011-07-23 14:06:00
+
+~
+
+Some changes have been made to how the standard and staggered search works. 
+
+Previously there was an option to search for a range of wheel diameters on both the standard and staggered search. 
+We received a fair amount of negative feedback about this, so we are changing how that particular slider works.
+On the standard search you are now able to pick a single wheel diameter. On the staggered search you are able to pick a different
+wheel diameter for the front and back tires.
+
+On the staggered search we increased the diameter variance allowed from .1" to .2".
+
+Also, more tires have been added to [TireDB](http://www.tiredb.com).
+
+* Bridgestone
+    * Potenza RE050
+    * Potenza RE050 RFT
+    * Potenza RE050A
+    * Potenza RE050A I RFT
+    * Potenza RE050A Pole Position
+    * Potenza RE050A Pole Position RFT
+    * Potenza S001
+    * Potenza S-02
+    * Potenza S-02 A
+    * Potenza S-04 Pole Position
+* Dunlop
+    * Sport Maxx GT DSST
+* Continental
+    * ContiSportContact 2
+    * ContiSportContact 2 SSR
+    * ContiSportContact 3
+    * ContiSportContact 3 SSR
+    * ExtremeContact DW
+* Goodyear
+    * Eagle F1 Asymmetric
+    * Eagle F1 GS-D3
+    * Eagle F1 Supercar
+* Kumho
+    * Ecsta LE Sport
+* Michelin
+    * Pilot Sport
+    * Pilot Sport 3
+    * Pilot Sport PS2
+    * Pilot Sport PS2 
+* Pirelli
+    * PZero
+    * PZero Nero
+    * PZero RFT
+    * PZero Rosso
+* Yokohama
+    * ADVAN Sport
+    * ADVAN Sport ZPS

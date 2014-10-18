@@ -1,0 +1,23 @@
+Wheel Width Search and More Tires Added
+2011-08-04 22:19:00
+
+~
+
+[TireDB](http://www.tiredb.com) has a new feature to search for tires based on wheel width. Select the width of your wheel and TireDB will show you all tires that will fit.
+
+We have also added some more tires to the search:
+
+* Bridgestone
+    * Potenza G 019 Grid
+    * Potenza RE92
+    * Potenza RE92a
+* Dunlop
+    * SP Sport 7000 A/S
+    * SP Sport Signature (H&V)
+* Hankook
+    * Optimo H426
+* Kumho
+    * Ecsta AST
+    * Ecsta LX Platinum
+* Michelin
+    * Pilot Exalto A/S

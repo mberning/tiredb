@@ -1,0 +1,11 @@
+Site updates
+2011-07-12 22:48:00
+
+~
+
+Some recent changes to [www.tiredb.com](http://www.tiredb.com).
+
+* Added Pirelli PZero System tires to the search. More Pirelli tires will be included in the future.
+* The search results now refresh automatically after you change the search parameters
+* Some visual improvements have been made to the search (cursors, spacing, etc.)
+* The blog has been updated!

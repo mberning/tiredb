@@ -1,0 +1,18 @@
+--- 
+javascripts: 
+- base: 
+  - jquery
+  - jquery-ui
+  - jquery.tools.min
+  - jquery.floatheader.min
+  - jquery.watermarkinput
+  - jquery_ujs
+  - application
+  - jquery.ui.touch-punch
+  - analytics
+stylesheets: 
+- base: 
+  - tiresearch
+  - blog
+  - sprites
+  - humanity/jquery-ui

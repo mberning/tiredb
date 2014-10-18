@@ -1,0 +1,27 @@
+<%= hidden_field_tag 'search_type', 'staggered' %>
+
+<span class="slider_value_label">Rear Tire Width</span> <span id="rear_tire_width_display"><%= "#{default_min_rear_tire_width} - #{default_max_rear_tire_width}" %></span>
+<%= hidden_field_tag 'min_rear_tire_width', default_min_rear_tire_width, :id => 'min_rear_tire_width' %>
+<%= hidden_field_tag 'max_rear_tire_width', default_max_rear_tire_width, :id => 'max_rear_tire_width' %>
+<div id="rear_tire_width_range" class="slider"></div>
+
+<br/>
+
+<span class="slider_value_label">Rear Wheel Diameter</span> <span id="rear_wheel_diameter_display"><%= "#{default_rear_wheel_diameter} inches" %></span>
+<%= hidden_field_tag 'rear_wheel_diameter', default_rear_wheel_diameter, :id => 'rear_wheel_diameter' %>
+<div id="rear_wheel_diameter_slider" class="slider"></div>
+
+<br/>
+
+<span class="slider_value_label">Front Tire Width</span> <span id="front_tire_width_display"><%= "#{default_min_front_tire_width} - #{default_max_front_tire_width}" %></span>
+<%= hidden_field_tag 'min_front_tire_width', default_min_front_tire_width, :id => 'min_front_tire_width' %>
+<%= hidden_field_tag 'max_front_tire_width', default_max_front_tire_width, :id => 'max_front_tire_width' %>
+<div id="front_tire_width_range" class="slider"></div>
+
+<br/>
+
+<span class="slider_value_label">Front Wheel Diameter</span> <span id="front_wheel_diameter_display"><%= "#{default_front_wheel_diameter} inches" %></span>
+<%= hidden_field_tag 'front_wheel_diameter', default_front_wheel_diameter, :id => 'front_wheel_diameter' %>
+<div id="front_wheel_diameter_slider" class="slider"></div>
+
+<%= render :partial => '/partials/tire_search_form_staggered.js.erb' %>

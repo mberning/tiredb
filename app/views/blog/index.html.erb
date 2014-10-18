@@ -1,0 +1,17 @@
+<div class="blog_body">
+  <%= link_to :root do %>
+    <span class="sprite sprite-tire_db_blog_logo"></span> <iframe style="float: right;" src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FTireDB%2F240389939328018&amp;width=292&amp;colorscheme=light&amp;show_faces=false&amp;border_color&amp;stream=false&amp;header=true&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:62px;" allowTransparency="true"></iframe>
+  <% end %>
+  <% @blog_posts.reverse!.each do |blog_post| %>
+    <div class="blog_post">
+      <div class="blog_post_title">
+        <span class="blog_post_date"><%= blog_post.date_formatted %></span><br/>
+        <%= blog_post.title %>
+      </div>
+      <br/>
+      <div class="blog_post_body">
+        <%= blog_post.body_html.html_safe %>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,83 @@
+<script type="text/javascript">
+  $(function() {  
+    $( "#rear_tire_width_range" ).slider({
+      range: true,
+      min: <%= min_tire_width %>,
+      max: <%= max_tire_width %>,
+      step: 10,
+      values: [ <%= default_min_rear_tire_width %>, <%= default_max_rear_tire_width %> ],
+      slide: function( event, ui ) {
+                $("#rear_tire_width_display").text(ui.values[0] + " - " + ui.values[1]);
+                $("#min_rear_tire_width").val(ui.values[0]);
+                $("#max_rear_tire_width").val(ui.values[1]);
+                $('form#search_form input#page').attr('value', 0);
+              },
+      stop: function( event, ui) {
+              $('#search_form').submit();
+            }
+    });
+    
+    $( "#front_tire_width_range" ).slider({
+      range: true,
+      min: <%= min_tire_width %>,
+      max: <%= max_tire_width %>,
+      step: 10,
+      values: [ <%= default_min_front_tire_width %>, <%= default_max_front_tire_width %> ],
+      slide: function( event, ui ) {
+                $("#front_tire_width_display").text(ui.values[0] + " - " + ui.values[1]);
+                $("#min_front_tire_width").val(ui.values[0]);
+                $("#max_front_tire_width").val(ui.values[1]);
+                $('form#search_form input#page').attr('value', 0);
+              },
+      stop: function( event, ui) {
+              $('#search_form').submit();
+            }
+    });
+    
+    $( "#front_wheel_diameter_slider" ).slider({
+      min: <%= min_wheel_diameter %>,
+      max: <%= max_wheel_diameter %>,
+      value: <%= default_front_wheel_diameter %>,
+      slide: function( event, ui ) {
+                $("#front_wheel_diameter_display").text(ui.value + " inches");
+                $("#front_wheel_diameter").val(ui.value);
+                $('form#search_form input#page').attr('value', 0);
+              },
+      stop: function( event, ui) {
+              $('#search_form').submit();
+            }
+    });
+    
+    $( "#rear_wheel_diameter_slider" ).slider({
+      min: <%= min_wheel_diameter %>,
+      max: <%= max_wheel_diameter %>,
+      value: <%= default_rear_wheel_diameter %>,
+      slide: function( event, ui ) {
+                $("#rear_wheel_diameter_display").text(ui.value + " inches");
+                $("#rear_wheel_diameter").val(ui.value);
+                $('form#search_form input#page').attr('value', 0);
+              },
+      stop: function( event, ui) {
+              $('#search_form').submit();
+            }
+    });
+    
+    $( "#tire_weight_range" ).slider({
+      range: true,
+      min: <%= min_tire_weight %>,
+      max: <%= max_tire_weight %>,
+      values: [ <%= default_min_tire_weight %>, <%= default_max_tire_weight %> ],
+      slide: function( event, ui ) {
+                $("#tire_weight_display").text(ui.values[0] + " - " + ui.values[1]);
+                $("#min_tire_weight").val(ui.values[0]);
+                $("#max_tire_weight").val(ui.values[1]);
+                $('form#search_form input#page').attr('value', 0);
+              },
+      stop: function( event, ui) {
+              $('#search_form').submit();
+            }
+    });
+  });
+  
+  _gaq.push(['_trackPageview', '/search/staggered']);
+</script>
